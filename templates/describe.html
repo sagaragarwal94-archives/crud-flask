@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block next %}
+<p>{{ name }}</p>
+{% endblock %}
+
+{% block show %}
+<p><strong>Description</strong> : 
+
+</p> <p>{{ desc }}</p>
+
+<br>
+<a class="btn-sm btn-link " href="{{ url_for('edit', item_name = name)}}"> Edit</a> | <a class="btn-sm btn-link " href="{{ url_for('delete', item_name = name) }}"> Delete </a>
+
+{% endblock %}
